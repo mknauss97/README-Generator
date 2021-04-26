@@ -25,7 +25,7 @@ function promptUser(){
             message: "What is this project used for?"
         },
         {
-            type: "checkbox",
+            type: "list",
             name: "license",
             message: "Which license(s) is your project under? ",
             choices: [
@@ -59,7 +59,7 @@ function promptUser(){
             message: "Please enter your email: "
         }
     ]);
-} 
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
