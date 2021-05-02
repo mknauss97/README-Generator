@@ -1,7 +1,7 @@
-// TODO: Include packages needed for this application
+
 const fs = require("fs")
 const inquirer = require("inquirer")
-// TODO: Create an array of questions for user input
+
 
 inquirer.prompt([
     {
@@ -66,47 +66,44 @@ inquirer.prompt([
         );
     });
 const readMe = data => {
-    return `<h1 align="center">${data.title}</h1>
-  
+    return `# ${data.title}
+    ![license](https://img.shields.io/badge/License-${data.license}-blue?style=for-the-badge&logo=appveyor.svg)
 
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contribution)
+- [Tests](#tests)    
+- [Questions](#questions)
+     
+## Description:
+${data.description}
+     
+## Installation:
+${data.installation}
+     
+## Usage:
+${data.usage}
+     
+## License:
 
-     ##Table of Contents
-     - [Description](#description)
-     - [Installation](#installation)
-     - [Usage](#usage)
-     - [License](#license)
-     - [Contributing](#contribution)
-     - [Tests](#tests)
-     - [Questions](#questions)
+This application is covered by the ${data.license} license. 
      
-     ##Description
-     ${data.description}
+## Contributions:
+${data.contribution}
      
-     ##Installation
-     ${data.installation}
+## Tests:
+${data.tests}
      
-     ##Usage
-     ${data.usage}
+## Questions:
+If there are any questions please contact me by the following:
      
-     ##License
-     ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
-     <br />
-     This application is covered by the ${data.license} license. 
+## Github
+Find me on Github, my username is: [${data.Github}](https://github.com/${data.Github})
      
-     ##Contributions
-     ${data.contribution}
-     
-     ##Tests
-     ${data.tests}
-     
-     ##Questions
-     ${data.questions}
-     
-     ##Github
-     Find me on Github, my username is: [${data.Github}](https://github.com/${data.Github})
-     
-     ##Email
-     Email me at : ${data.email}
-     `;
+## Email
+Email me at : ${data.email} `;
 
 }
